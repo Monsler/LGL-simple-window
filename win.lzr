@@ -1,0 +1,27 @@
+using "LGL"
+using "time"
+
+class Application{
+  w = 800
+  h = 500
+  func init(){
+    LWindow("LGL Window",w, h)
+    while(true){
+      sleep(10)
+      this.draw()
+    }
+  }
+  func draw(){
+    Redraw()
+    LFill(255,255,255)
+    LRect(0, 0, w, h)
+    LFill(50,50,50)
+    ms = Mouse()
+    LEllipse(ms[0], ms[1], 50,50)
+    LFill(0,0,0)
+    LText("By monsler11111111",0,0)
+  }
+}
+
+app = new Application()
+app.init()
